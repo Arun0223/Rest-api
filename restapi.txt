@@ -1,0 +1,48 @@
+REST API(Representational state transfer application program interface)
+==> Rest api is a software stracture it provides the interaction between client and server that too with high performance and scalability also realiablilty
+REST defines the following architectural constraints:
+	stateless
+	client-server ==> here wen can decouple client and server and develop individually
+	layerd-stracture ==> here we client interact with server in layers like proxy and load balancer
+	cachebale ==> The data which is retrieved from server can store in client or server side
+	uniform interface ==> it will provide the data uniformly
+	
+REST API AND WEBSERVICES:
+	The webservices which adhres to rest api they are called as rest webservices
+	They are giving data to the outside world through api those are using public URLs
+	Example:
+		https://api.github.com/users/<username>
+HTTP Methods:
+	Rest api listen to http methods which decides what action to be performed
+	1) GET ==> To retrieve the infomation
+	2) PUT ==> update the resource
+	3) POST ==> Create new resource
+	4) DELETE ==> Delete the resource
+Rest api have some staus codes to represent the result:
+	200	OK	The requested action was successful.
+	201	Created	A new resource was created.
+	202	Accepted	The request was received, but no modification has been made yet.
+	204	No Content	The request was successful, but the response has no content.
+	400	Bad Request	The request was malformed.
+	401	Unauthorized	The client is not authorized to perform the requested action.
+	404	Not Found	The requested resource was not found.
+	415	Unsupported Media Type	The request data format is not supported by the server.
+	422	Unprocessable Entity	The request data was properly formatted but contained invalid or missing data.
+	500	Internal Server Error	The server threw an error when processing the request.
+These are code ranges:
+	2xx	Successful operation
+	3xx	Redirection
+	4xx	Client error
+	5xx	Server error
+	
+Getting data from get call using python
+syntax:
+	import requests as r
+	api_url='https://jsonplaceholder.typicode.com/todos/1'
+	response=r.get(api_url)
+	# print(response.json())
+	response1=r.get(api_url)
+	# print(response.json())
+	
+	
+	
